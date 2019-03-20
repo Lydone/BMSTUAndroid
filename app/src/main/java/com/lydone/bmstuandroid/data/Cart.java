@@ -5,17 +5,16 @@ import java.util.List;
 
 public class Cart {
 
-    private List<Item> items = new ArrayList<Item>();
+    private static final Cart cart = new Cart();
+    private List<Item> items = new ArrayList<>();
 
-    public Cart(Item[] NewItems) {
-        for (Item it : NewItems) {
-            items.add(it);
-        }
+    private Cart() {
     }
 
-    public Cart() {
-
+    public static Cart getInstance() {
+        return cart;
     }
+
 
     public int GetSum() {                 //Метод считающий сумму всех товаров в корзине
         int sum = 0;
