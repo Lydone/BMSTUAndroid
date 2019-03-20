@@ -13,10 +13,11 @@ public class Cart {
         for (Item it: items) {
             sum+=it.getPrice();
         }
+        return sum;
     }
 
     public void AddToCart(Item item){
-        items.Add(item);
+        items.add(item);
     }
 
     public ArrayList<Item> getItems() {
@@ -25,7 +26,7 @@ public class Cart {
 
     public Cart(Item[] NewItems){
         for (Item it: NewItems) {
-            items.Add(it);
+            items.add(it);
         }
     }
 
