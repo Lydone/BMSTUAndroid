@@ -1,6 +1,36 @@
 package com.lydone.bmstuandroid.data;
 
+import java.util.ArrayList;
+
 public class Cart {
-    // TODO
-    // for storing current buyer's choice
+
+    ArrayList<Item> items = new ArrayList<Item>();
+
+    public int GetSum(){
+
+        int sum=0;
+
+        for (Item it: items) {
+            sum+=it.getPrice();
+        }
+    }
+
+    public void AddToCart(Item item){
+        items.Add(item);
+    }
+
+    public ArrayList<Item> getItems() {
+        return items;
+    }
+
+    public Cart(Item[] NewItems){
+        for (Item it: NewItems) {
+            items.Add(it);
+        }
+    }
+
+    public Cart(){
+
+    }
+
 }
