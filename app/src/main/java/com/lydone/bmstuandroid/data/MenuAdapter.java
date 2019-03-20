@@ -1,5 +1,6 @@
 package com.lydone.bmstuandroid.data;
 
+import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -62,7 +63,7 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuViewHolder
             mNameTV.setText(item.getName());
             mWeightTV.setText("Weight: " + item.getWeight());
             mPriceTV.setText("Price: " + item.getPrice());
-            mImageView.setImageDrawable(mNameTV.getContext().getDrawable(R.drawable.ic_launcher_background));
+            mImageView.setImageDrawable(mNameTV.getContext().getDrawable(item.getDrawableId()));
             mButton.setOnClickListener((v) -> {
                 Cart.getInstance().AddToCart(item);
                 Toast.makeText(mNameTV.getContext(), "" + Cart.getInstance().GetSum(), Toast.LENGTH_SHORT).show();
