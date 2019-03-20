@@ -1,20 +1,21 @@
 package com.lydone.bmstuandroid.data;
 
+import java.util.List;
+
 public class Item {
 
+    public static List<Item> generateMenu() {
+        // TODO
+        throw new UnsupportedOperationException();
+    }
     String name;
     int price;
     int weight;
 
-    public Item(String nam, int price, int gramm){
-        name=nam;
+    public Item(String name, int price, int weight){
+        this.name=name;
         this.price=price;
-        weight=gramm;
-    }
-
-    @Override
-    public String ToString(){
-        return "Наименование: " + name + " Цена: " + price + " вес: " + weight + "гр."
+        this.weight = weight;
     }
 
     public int getPrice() {
