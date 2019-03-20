@@ -17,4 +17,16 @@ public class Item {
         return "Наименование: " + name + " Цена: " + price + " вес: " + weight + "гр."
     }
 
+    public int getPrice() {
+        return price;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public string getName() {
+        return name;
+    }
+
 }
