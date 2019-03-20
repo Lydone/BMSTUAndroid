@@ -2,18 +2,18 @@ package com.lydone.bmstuandroid.data;
 
 public class Item {
 
-    string name;
+    String name;
     int price;
     int weight;
 
-    public Item(string nam, int price, int gramm){
+    public Item(String nam, int price, int gramm){
         name=nam;
         this.price=price;
         weight=gramm;
     }
 
     @Override
-    public string ToString(){
+    public String ToString(){
         return "Наименование: " + name + " Цена: " + price + " вес: " + weight + "гр."
     }
 
@@ -25,7 +25,7 @@ public class Item {
         return weight;
     }
 
-    public string getName() {
+    public String getName() {
         return name;
     }
 
