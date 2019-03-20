@@ -17,7 +17,7 @@ public class Cart {
 
     }
 
-    public int GetSum() {
+    public int GetSum() {                 //Метод считающий сумму всех товаров в корзине
         int sum = 0;
         for (Item it : items) {
             sum += it.getPrice();
@@ -25,7 +25,7 @@ public class Cart {
         return sum;
     }
 
-    public void AddToCart(Item item) {
+    public void AddToCart(Item item) {     //Метод для добавления товара в корзину
         items.add(item);
     }
 
